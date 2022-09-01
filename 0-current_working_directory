@@ -1,9 +1,0 @@
-#!/bin/bash
-
-# My first script
-
- echo "$(cd "$(dirname "$1")" && pwd -P)/$(basename "$1")"
-
-
-
-
