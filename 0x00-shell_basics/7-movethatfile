@@ -1,2 +1,2 @@
 #!/bin/bash
-mv -m777 chmod u+x ./tmp/betty /tmp/my_first_directory 
+mv -p -m777 ./tmp/betty /my_first_directory 
