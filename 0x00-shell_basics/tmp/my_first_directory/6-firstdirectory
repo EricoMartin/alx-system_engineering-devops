@@ -1,0 +1,2 @@
+#!/bin/bash
+ls -p -m77 tmp/my_first_directory
