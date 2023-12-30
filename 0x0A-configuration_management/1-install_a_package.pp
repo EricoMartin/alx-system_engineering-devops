@@ -1,4 +1,4 @@
-#!/usr/bin/pup
+#!/usr/bin/pip
 
 # This is a puppet script that installs flask from pip3
 
