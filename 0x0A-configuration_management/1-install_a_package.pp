@@ -6,8 +6,3 @@ exec {'install_flask':
   refreshonly => true,
   creates     => '/usr/lib/python3/dist-packages/Flask/__init__.py',
 }
-
-package {'flask':
-  ensure  => 'installed',
-  require => Exec['install_flask'],
-}
