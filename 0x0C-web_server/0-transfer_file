@@ -10,9 +10,9 @@ elif [ "$#" -eq 3 ]
 	username=$3
 	ssh_key_path=$4
 then
-	scp -o StrictHostKeyChecking=no "$file_path" "$username@$server_ip:~/"
+	scp -o StrictHostKeyChecking=no "$file_path" "$username@$server_ip":~/
 else
-	scp -o StrictHostKeyChecking=no -i "$ssh_key_path" "$file_path" "$username@$server_ip:~/"
+	scp -o StrictHostKeyChecking=no -i "$ssh_key_path" "$file_path" "$username@$server_ip":~/
 fi
 
 
