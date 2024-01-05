@@ -2,5 +2,4 @@
 #get Apache to run on the container and to return
 #a page containing Hello Holberton
 
-apt install apache2-bin
 sudo service apache2 start
