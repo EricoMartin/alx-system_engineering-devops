@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# Create a script to install and configure HAProxy
+
+sudo apt-get -y update
+apt-get -y install haproxy
+
+server_config=\
+"
+frontend eric_frontend
+        bind *:80
+        mode http
+        default_backend eric_backend
+backend eric_backend
+        balance roundrobin
+        server 143522-web-01 54.237.109.37:80 check
+        server 143522-web-02 18.235.255.100:80 check
+"
+echo "$server_config" | sudo tee -a /etc/haproxy/haproxy.cfg
+
+# enable haproxy to be started by init script
+echo "ENABLED=1" | sudo tee -a /etc/default/haproxy
+
+# Restart the Nginx service
+sudo service haproxy restart
