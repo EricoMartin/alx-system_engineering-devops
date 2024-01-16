@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#configure web server
+
+eval $("ssh-agent")
+
+ssh-add /root/.ssh/id_rsa
+ssh ubuntu@54.237.109.37
