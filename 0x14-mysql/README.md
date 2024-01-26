@@ -1,7 +1,7 @@
 ## 0x14. MySQL
 
 ## Concepts
-* For this project, we expect you to look at these concepts:
+  For this project, we expect you to look at these concepts:
 
 - Database administration
 - Web stack debugging
