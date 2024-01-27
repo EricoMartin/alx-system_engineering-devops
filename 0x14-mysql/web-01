@@ -1,0 +1,1 @@
+ssh ubuntu@web-01.ericmartin.tech -i /root/.ssh/id_rsa
