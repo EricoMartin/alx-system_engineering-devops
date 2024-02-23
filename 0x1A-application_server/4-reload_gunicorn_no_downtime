@@ -2,3 +2,9 @@
 #reload Gunicorn in a graceful way.
 
 pgrep gunicorn | xargs kill -HUP
+# Check if Gunicorn service is running
+if systemctl is-active --quiet gunicorn; then
+    # Reload Gunicorn gracefully
+    echo "Reloading Gunicorn gracefully..."
+    sudo systemctl reload gunicorn
+fi
